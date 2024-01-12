@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealLC Plugin</title>
+    <style>
+        body {
+            background-color: #111;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 150px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -75px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #pluginDetails,
+        #permissionsList,
+        #commandsList {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        /* Style for the logo */
+        #logo {
+            font-family: 'Pacifico', cursive;
+            font-size: 2em;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="logo">HealLC Plugin</h1>
+    </header>
+
+    <nav>
+        <div class="tooltip">
+            <a href="#">Home</a>
+            <span class="tooltiptext">Stay on Home</span>
+        </div>
+    </nav>
+
+    <section>
+        <p>Welcome to the HealLC Plugin website! Follow the steps below to install your plugin:</p>
+
+        <ol>
+            <li>Download the plugin file.</li>
+            <li>Locate your Minecraft server directory.</li>
+            <li>Copy the plugin file into the "plugins" folder.</li>
+            <li>Restart your Minecraft server.</li>
+        </ol>
+
+        <div class="tooltip">
+            <button onclick="downloadPlugin()">Download Plugin</button>
+            <span class="tooltiptext">Click to start the download</span>
+        </div>
+
+        <div id="pluginDetails">
+            <p>HealLC is a Minecraft 1.20 Spigot plugin made in Java. It is a heal plugin designed to regenerate players' health to 20.</p>
+        </div>
+
+        <div id="permissionsList">
+            <h2>Permissions</h2>
+            <ul>
+                <li><strong>heal.use:</strong> Heal yourself.</li>
+                <li><strong>healall.use:</strong> Heal every online player.</li>
+                <li><strong>healother.use:</strong> Heal other players.</li>
+            </ul>
+        </div>
+
+        <div id="commandsList">
+            <h2>Commands</h2>
+            <ul>
+                <li><strong>/heal:</strong> Heal yourself.</li>
+                <li><strong>/healall:</strong> Heal every online player.</li>
+                <li><strong>/heal &lt;PLAYER&gt;:</strong> Heal other players.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 HealLC Plugin</p>
+    </footer>
+
+    <script>
+        function downloadPlugin() {
+            // Add download logic here or link to your plugin file
+            alert("Downloading plugin..."); // Placeholder alert
+        }
+    </script>
+</body>
+</html>
